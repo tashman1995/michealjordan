@@ -15,14 +15,14 @@ const AirSection = () => {
       <section className="air">
         <div
           data-aos="fade-right"
-          data-aos-offset="700"
+          data-aos-offset="300"
           data-aos-once
           className="air__logo-container">
           <img className="air__logo" src={jumpMan} alt="" />
         </div>
         <div
           data-aos="fade-left"
-          data-aos-offset="700"
+          data-aos-offset="300"
           data-aos-once
           className="air__header">
           <h2 className="heading-primary heading-primary--large">
@@ -32,7 +32,7 @@ const AirSection = () => {
         <div
           className="air__content"
           data-aos="fade-up"
-          data-aos-offset="700"
+          data-aos-offset="300"
           data-aos-once>
           <img className="air__jordan-img" src={jordanAndAir} alt="" />
           <div className="air__sub-title">
