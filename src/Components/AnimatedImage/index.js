@@ -14,7 +14,7 @@ const trans2 = (x, y) => `translate3d(${x / 150}px,${y / 80}px,0) `;
 
 const AnimatedImage = () => {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 3000 });
   }, []);
 
   const addEventListeners = () => {

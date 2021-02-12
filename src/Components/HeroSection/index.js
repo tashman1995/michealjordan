@@ -37,7 +37,7 @@ const HeroSection = () => {
         </span>
         <span
           data-aos="fade-right"
-          data-aos-offset="0"
+          data-aos-offset="-400"
           data-aos-delay="1000"
           data-aos-once
           className="hero__text--4 heading heading-primary">
