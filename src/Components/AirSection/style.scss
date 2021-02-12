@@ -1,0 +1,135 @@
+@import "../../Style//abstracts/mixins";
+.air {
+  margin: 15rem 0 20rem;
+  position: relative;
+  z-index: 0;
+
+  &__header {
+    position: relative;
+    margin-left: 20rem;
+    z-index: 200;
+
+    @include respond(medium) {
+      margin-left: 10rem;
+    }
+
+    @include respond(medium-small) {
+      margin-left: 2.4rem;
+    }
+  }
+
+  &__logo-container {
+    z-index: 0;
+    position: absolute;
+    top: -30rem;
+    left: 40vw;
+    @include respond(small) {
+      top: -30rem;
+      left: 25vw;
+    }
+  }
+
+  &__logo {
+    z-index: 0;
+    width: 60rem;
+
+    @include respond(medium) {
+      width: 40rem;
+    }
+
+    @include respond(medium-small) {
+      margin-top: 15rem;
+      width: 38rem;
+    }
+  }
+
+  &__content {
+    margin: 9.6rem 4.8rem;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+
+    @include respond(small) {
+      flex-direction: column;
+      align-items: flex-end;
+       margin: 14rem 4.8rem;
+    }
+  }
+
+  &__jordan-img {
+    width: 35rem;
+    object-fit: cover;
+    margin-left: 9.6rem;
+
+    @include respond(medium) {
+      margin-left: 4.8rem;
+    }
+
+    @include respond(medium-small) {
+      margin-left: 0;
+      width: 30rem;
+    }
+  }
+
+  &__text {
+    padding-top: 12rem;
+    width: 60rem;
+    column-count: 2;
+
+    @include respond(large) {
+      padding-top: 8rem;
+    }
+
+    @include respond(medium) {
+      column-count: 1;
+      margin-left: 4.8rem;
+      padding-top: 4.8rem;
+    }
+
+    @include respond(small) {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  &__sub-title {
+    min-width: 20rem;
+    padding: 12rem 5.8rem 0 3.6rem;
+    flex-grow: 1;
+    margin: 0;
+    text-align: right;
+
+    @include respond(large) {
+      padding-top: 8rem;
+    }
+    @include respond(medium) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+      @include respond(medium) {
+        display: block;
+        padding: 0;
+        text-align: left;
+        margin-bottom: 4.8rem;
+      }
+    }
+  }
+
+  &__side-text {
+    position: absolute;
+    left: 0;
+    bottom: -10rem;
+    margin-left: 9.6rem;
+
+    @include respond(medium-small) {
+      bottom: 0rem;
+      margin-left: 1.2rem;
+    }
+
+    @include respond(small) {
+      display: none;
+    }
+  }
+}

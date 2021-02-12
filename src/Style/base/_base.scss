@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // font-size: 65.5%; // 1rem = 10px HOSTED
+  font-size: 62.5%;
+
+  @include respond(large) {
+    // font-size: 54%; //1 rem = 8px  8/16 = 50% HOSTED
+    font-size: 55%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $color-white;
+  color: $color-black;
+}
+
+#root {
+  width: 100%;
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 140rem;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+main {
+  margin-bottom: 23rem;
+  z-index: 1;
+}
+
+button {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  border-spacing: 0;
+  font: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.42rem;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

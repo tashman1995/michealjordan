@@ -1,0 +1,65 @@
+@import "../../Style/abstracts/variables";
+@import "../../Style/abstracts/mixins";
+
+.highlights {
+  margin: 0 4.8rem;
+  &__head {
+    display: grid;
+    grid-template-columns: 1fr repeat(7, 1.5fr);
+    grid-template-rows: 1fr 3fr 3fr 1fr;
+  }
+
+  &__title {
+    z-index: 2;
+    grid-column: 1 / 4;
+    grid-row: 2 /3;
+  }
+
+  &__main-image {
+    z-index: 1;
+    width: 100%;
+    grid-column: 3/9;
+    grid-row: 1 /4;
+  }
+
+  &__sub-image {
+    z-index: 2;
+    width: 100%;
+    grid-column: 2/5;
+    grid-row: 3/4;
+  }
+
+  &__content {
+    display: flex;
+    @include respond(medium) {
+      flex-direction: column;
+    }
+  }
+
+  &__columns {
+    column-count: 4;
+    @include respond(medium) {
+      column-count: 3;
+    }
+    @include respond(medium) {
+      column-count: 1;
+    }
+  }
+
+  &__side-header {
+    margin-right: 8rem;
+    @include respond(medium) {
+      margin-right: 2rem;
+    }
+
+    @include respond(medium) {
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  &__quote {
+    margin: 10rem 0;
+    padding: 4rem 2rem;
+    border-left: 1.5px solid $color-primary;
+  }
+}

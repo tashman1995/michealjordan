@@ -1,0 +1,128 @@
+@import "../../Style/abstracts/mixins";
+@import "../../Style/abstracts/variables";
+.hero {
+  margin: 10rem 4.8rem 10rem 4.8rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @include respond(medium-small) {
+    margin-top: 12rem;
+  }
+  @include respond(tiny) {
+    margin-top: 10rem;
+  }
+
+  &__text {
+    position: absolute;
+    top: -8rem;
+    z-index: 2;
+
+    @include respond(medium) {
+      top: -6.5rem;
+    }
+    @include respond(medium-small) {
+      top: -11rem;
+    }
+    @include respond(small) {
+      top: -10rem;
+    }
+    @include respond(tiny) {
+      top: -8rem;
+    }
+
+    &--1 {
+      width: 90rem;
+      text-align: center;
+    }
+
+    &--2 {
+      margin-top: 19rem;
+      margin-left: 1rem;
+
+      @include respond(medium) {
+        margin-top: 23rem;
+        margin-left: 8rem;
+      }
+
+      @include respond(medium-small) {
+        margin-top: 30rem;
+        margin-left: 21rem;
+      }
+
+      @include respond(small) {
+        margin-top: 26rem;
+        margin-left: 25.5rem;
+      }
+
+      @include respond(tiny) {
+         margin-top: 20rem;
+        margin-left: 31rem;
+      }
+    }
+
+    &--3 {
+      margin-left: 5rem;
+
+      @include respond(medium) {
+        margin-left: 12rem;
+      }
+
+      @include respond(medium-small) {
+        margin-left: 21rem;
+      }
+
+      @include respond(small) {
+        margin-left: 26rem;
+      }
+      @include respond(tiny) {
+        margin-left: 30.5rem;
+      }
+    }
+
+    &--4 {
+      margin-top: 25rem;
+      margin-left: 40rem;
+
+      @include respond(medium) {
+        margin-left: 38rem;
+      }
+
+      @include respond(medium-small) {
+        font-size: 8rem !important;
+        margin-left: 31rem;
+        margin-top: 32rem;
+      }
+      @include respond(small) {
+        font-size: 6.2rem !important;
+        margin-left: 35rem;
+        margin-top: 21rem;
+      }
+      @include respond(tiny) {
+        font-size: 4rem !important;
+        margin-left: 41rem;
+        margin-top: 12rem;
+      }
+    }
+  }
+
+  &__sub-text {
+    position: absolute;
+    line-height: 3;
+
+    @include respond(medium-small) {
+      display: none;
+    }
+
+    &--left {
+      left: 0;
+      bottom: 10rem;
+    }
+
+    &--right {
+      right: 0;
+      text-align: right;
+      bottom: -20rem;
+    }
+  }
+}

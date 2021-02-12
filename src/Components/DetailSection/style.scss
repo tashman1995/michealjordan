@@ -1,0 +1,54 @@
+@import "../../Style/abstracts/mixins";
+@import "../../Style/abstracts/variables";
+.detail {
+  width: 100%;
+  @include center;
+  margin: 25rem 0;
+
+  @include respond(medium-small) {
+    margin: 16rem 0;
+  }
+
+  &__table {
+    & td,
+    & th {
+      border: 1.5px solid $color-primary;
+    }
+
+    border-collapse: collapse;
+
+    &--window {
+      @include respond(small) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+      @include respond(small) {
+        display: block;
+      }
+      & h2 {
+        text-align: center !important;
+      }
+    }
+  }
+
+  &__num {
+    padding: 1.6rem 4.8rem;
+    @include respond(small) {
+      padding: .6rem 3.6rem;
+    }
+  }
+
+  &__name {
+    padding: 0.6rem 8rem 0.6rem 2.4rem;
+    @include respond(small) {
+      padding: 0.6rem 4rem 0.6rem 4rem;
+    }
+    @include respond(small) {
+      padding: 0.6rem 1rem 0.6rem 1rem;
+    }
+  
+  }
+}

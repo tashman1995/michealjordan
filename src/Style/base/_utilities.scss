@@ -1,0 +1,50 @@
+.u-grid {
+  display: grid;
+  //   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] 14rem [col-end]) [center-end] minmax(
+      6rem,
+      1fr
+    )
+    [full-end];
+
+  @include respond(large) {
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] 12rem [col-end]) [center-end] minmax(
+        6rem,
+        1fr
+      )
+      [full-end];
+  }
+
+  @include respond(medium-large) {
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] 11rem [col-end]) [center-end] minmax(
+        6rem,
+        1fr
+      )
+      [full-end];
+  }
+  @include respond(medium-small) {
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(
+        6rem,
+        1fr
+      )
+      [full-end];
+  }
+
+  @include respond(small) {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr)
+      [center-start] repeat(8, [col-start] 1fr [col-end]) [center-end] minmax(
+        2rem,
+        1fr
+      )
+      [full-end];
+  }
+}

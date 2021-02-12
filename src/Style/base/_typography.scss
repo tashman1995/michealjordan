@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,200&display=swap");
+
+body {
+  font-family: $font-family;
+  font-weight: 200;
+  line-height: 1.7;
+  font-size: 2rem;
+  @include center;
+}
+
+.heading {
+  font-family: $header-font-family;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.heading-primary {
+  display: block;
+  color: $color-primary;
+  font-size: 8rem;
+  text-transform: uppercase;
+  line-height: 1;
+
+  @include respond(medium) {
+    font-size: 6.5rem;
+  }
+  @include respond(medium-small) {
+    font-size: 5rem;
+  }
+  @include respond(small) {
+    font-size: 4rem;
+  }
+  @include respond(tiny) {
+    font-size: 3rem;
+  }
+
+  &--large {
+    font-size: 16rem;
+    line-height: 0.8;
+
+    @include respond(medium) {
+      font-size: 15rem;
+    }
+
+    @include respond(medium-small) {
+      font-size: 12rem;
+    }
+
+    @include respond(small) {
+      font-size: 8rem;
+    }
+    @include respond(tiny) {
+      font-size: 6rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 5rem;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 1;
+
+  @include respond(medium-small) {
+    font-size: 4rem;
+  }
+
+  @include respond(small) {
+    font-size: 3.5rem;
+  }
+}
+
+.bold {
+  font-weight: 700;
+
+   @include respond(tiny) {
+    font-size: 1.8rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.4rem;
+  line-height: 1.2;
+
+ 
+}
+.small-paragraph {
+  font-size: 1.4rem;
+}
+
+.primary {
+  color: $color-primary;
+}
+
+.caps {
+  text-transform: uppercase;
+}

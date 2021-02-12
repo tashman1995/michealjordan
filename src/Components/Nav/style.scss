@@ -1,0 +1,52 @@
+@import "../../Style/abstracts/variables";
+@import "../../Style/abstracts/mixins";
+
+.nav {
+  margin: 1.8rem 4.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  border-bottom: 1px solid rgba($color: $color-black, $alpha: 0.1);
+  &__section {
+    @include center;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba($color: $color-black, $alpha: 0.1);
+    }
+
+    &--description {
+      width: max-content;
+      padding-right: 4.8rem;
+      justify-content: left;
+
+      @include respond(large) {
+        padding-right: 2.4rem;
+      }
+      @include respond(medium) {
+        padding-right: 4.8rem;
+      }
+      @include respond(medium-small) {
+        display: none;
+      }
+    }
+
+    &--date {
+      flex-grow: 3;
+      padding: 0 1.2rem;
+      @include respond(medium) {
+        display: none;
+      }
+    }
+
+    &--sig {
+      flex-grow: 3;
+      @include respond(medium) {
+        flex-grow: 2;
+      }
+    }
+  }
+  &__sig {
+    width: 17rem;
+    margin-bottom: 0.6rem;
+  }
+}
